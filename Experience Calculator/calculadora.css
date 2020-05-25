@@ -1,0 +1,23 @@
+.caixainicial{
+width: 70%;
+align-content: center;
+margin: auto;
+background:#e3e3e3;
+}
+.zp{
+    height: 80px;
+    align-content: center;
+}
+body nav ul li{
+    display: inline-block;
+    margin-left: 20px;
+
+}
+body nav ul li a {
+    font-size: 30px;
+    color: red;
+    text-decoration: none;
+}
+body nav ul li a:hover {
+        color: #00bac6;
+}

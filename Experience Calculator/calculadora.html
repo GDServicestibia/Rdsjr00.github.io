@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta name="GDServices" content="Experience Service Calculator" a />
+<link rel="stylesheet" type="text/css" href="teste.css">
+
+<head>
+    <title>Experience GDServices Calculator</title>
+    <meta charset="UTF-8" />
+    <script type="text/javascript">
+        function calculadinheiro() {
+            var n1 = document.getElementById("n1").value;
+            var n2 = document.getElementById("n2").value;
+            if (n1 <= 50 && n2 <= 50) {
+                var valor = (((50 / 3) * parseInt(n2) ** 3 - 100 * parseInt(n2) ** 2 + (850 / 3) * parseInt(n2) - parseInt(200)) - ((50 / 3) * parseInt(n1) ** 3 - 100 * parseInt(n1) ** 2 + (850 / 3) * parseInt(n1) - parseInt(200))) / (1000000 / 12);
+            }
+            if (50 < n1 <= 130 && 50 < n2 <= 130) {
+                var valor = (((50 / 3) * parseInt(n2) ** 3 - 100 * parseInt(n2) ** 2 + (850 / 3) * parseInt(n2) - parseInt(200)) - ((50 / 3) * parseInt(n1) ** 3 - 100 * parseInt(n1) ** 2 + (850 / 3) * parseInt(n1) - parseInt(200))) / (1000000 / 10);
+            }
+            if (50 < n1 <= 130 && n2 > 130) {
+                var valor = (((50 / 3) * parseInt(n2) ** 3 - 100 * parseInt(n2) ** 2 + (850 / 3) * parseInt(n2) - parseInt(200)) - ((50 / 3) * parseInt(130) ** 3 - 100 * parseInt(130) ** 2 + (850 / 3) * parseInt(130) - parseInt(200))) / (1000000 / 8) + (((50 / 3) * parseInt(130) ** 3 - 100 * parseInt(130) ** 2 + (850 / 3) * parseInt(130) - parseInt(200)) - ((50 / 3) * parseInt(n1) ** 3 - 100 * parseInt(n1) ** 2 + (850 / 3) * parseInt(n1) - parseInt(200))) / (1000000 / 10);
+            }
+            if (n1 > 130 && n2 > 130) {
+                var valor = (((50 / 3) * parseInt(n2) ** 3 - 100 * parseInt(n2) ** 2 + (850 / 3) * parseInt(n2) - parseInt(200)) - ((50 / 3) * parseInt(n1) ** 3 - 100 * parseInt(n1) ** 2 + (850 / 3) * parseInt(n1) - parseInt(200))) / (1000000 / 8);
+            }
+            if (n1 <= 50 && 50 < n2 <= 130) {
+                var valor = (((50 / 3) * parseInt(n2) ** 3 - 100 * parseInt(n2) ** 2 + (850 / 3) * parseInt(n2) - parseInt(200)) - ((50 / 3) * parseInt(50) ** 3 - 100 * parseInt(50) ** 2 + (850 / 3) * parseInt(50) - parseInt(200))) / (1000000 / 10) + (((50 / 3) * parseInt(50) ** 3 - 100 * parseInt(50) ** 2 + (850 / 3) * parseInt(50) - parseInt(200)) - ((50 / 3) * parseInt(n1) ** 3 - 100 * parseInt(n1) ** 2 + (850 / 3) * parseInt(n1) - parseInt(200))) / (1000000 / 12);
+            }
+            if (n1 < 50 && n2 > 130) {
+                var valor = (((50 / 3) * parseInt(n2) ** 3 - 100 * parseInt(n2) ** 2 + (850 / 3) * parseInt(n2) - parseInt(200)) - ((50 / 3) * parseInt(130) ** 3 - 100 * parseInt(130) ** 2 + (850 / 3) * parseInt(130) - parseInt(200))) / (1000000 / 8) + (((50 / 3) * parseInt(50) ** 3 - 100 * parseInt(50) ** 2 + (850 / 3) * parseInt(50) - parseInt(200)) - ((50 / 3) * parseInt(n1) ** 3 - 100 * parseInt(n1) ** 2 + (850 / 3) * parseInt(n1) - parseInt(200))) / (1000000 / 10) + (((50 / 3) * parseInt(130) ** 3 - 100 * parseInt(130) ** 2 + (850 / 3) * parseInt(130) - parseInt(200)) - ((50 / 3) * parseInt(50) ** 3 - 100 * parseInt(50) ** 2 + (850 / 3) * parseInt(50) - parseInt(200))) / (1000000 / 10);
+            }
+            alert(valor);
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset class="caixainicial">
+        <legend><strong>CÁLCULO DO DINHEIRO - EXPERIENCE SERVICE - TIBIA</strong></legend>
+        <div class="zp">
+            <label>nível inicial:</label>
+            <input id="n1" type="text" />
+            <label>nível final:</label>
+            <input id="n2" type="text" />
+            <button id="calcular" onclick="calculadinheiro()">Calcular Valor</button>
+        </div>
+        <nav class="contato">
+            <ul>
+                <li><a href="https://www.dfgames.com.br/pt/tibia/outros/service-xp-977146035">DFG Serviços</a>
+                </li>
+                <li><a href="">Whats +55 16 99463-3955</a></li>
+            </ul>
+        </nav>
+    </fieldset>
+</body>
+
+</html>
